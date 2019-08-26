@@ -13,7 +13,7 @@ userNum = String(userNum);
 
 function getEven(num) {
 	let arrOfNum = [];
-  let count = 0;
+  	let count = 0;
 
 	arrOfNum = num.split('');
 
