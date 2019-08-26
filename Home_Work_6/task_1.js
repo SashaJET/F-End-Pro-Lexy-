@@ -11,7 +11,7 @@ do {
 
 userNum = String(userNum);
 
-function getEven(num) {
+function getEvenQuantity(num) {
 	let arrOfNum = [];
   	let count = 0;
 
@@ -26,5 +26,5 @@ function getEven(num) {
 	return count;
 }
 
-result = getEven(userNum);
+result = getEvenQuantity(userNum);
 alert('Tут четных цифр: '+ result);
