@@ -17,7 +17,7 @@ const obj = {
 }
 
 function copy(obj) {
-	let newObj = Object.assign({}, obj);
+	let newObj = {};
 
 	for (let key in obj) {
 			if (typeof(obj[key]) == 'object') {
