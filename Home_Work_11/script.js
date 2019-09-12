@@ -18,7 +18,6 @@ function groupAverageMark(arr) {
   
 }
 
-// ========== 
 
 const students = [
   new Student('Student 1', [10,9,8,0,10]),
