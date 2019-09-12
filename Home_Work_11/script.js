@@ -13,8 +13,8 @@ Student.prototype.averageMark = function (){
 
 function groupAverageMark(arr) {
   return arr.reduce(
-      (sum, current) => sum + current.averageMark(), 0
-    ) / arr.length;
+              (sum, current) => sum + current.averageMark(), 0
+            ) / arr.length;
   
 }
 
