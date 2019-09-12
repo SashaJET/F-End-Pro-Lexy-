@@ -5,7 +5,7 @@ function Student(name, marks) {
   this.marks = marks
 }
 
-Student.prototype.averageMark = function (){
+Student.prototype.averageMark = function() {
   return this.marks
              .reduce((sum, current) => sum + current) 
               / this.marks.length;
