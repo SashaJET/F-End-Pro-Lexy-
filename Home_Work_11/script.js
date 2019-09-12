@@ -15,7 +15,6 @@ function groupAverageMark(arr) {
   return arr.reduce(
               (sum, current) => sum + current.averageMark(), 0
             ) / arr.length;
-  
 }
 
 
