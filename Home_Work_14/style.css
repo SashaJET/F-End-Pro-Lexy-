@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tab-container {
+    min-width: 505px;
+    max-width: 600px;
+    margin: 5% auto;
+}
+
+.tabset-title {
+    min-width: 155px;
+    padding: 15px 5px;
+    border: none;
+    margin: 0;
+    background-color: #aad4e1;
+    color: white;
+}
+
+.tabset-title__active {
+    background-color: #e3e3e3;
+    color: #000;
+    border-top: 3px solid #aad4e1;
+}
+
+.tabset-body {
+    height: 250px;
+    padding: 25px; 
+    display: none;
+}
+
+.tabset-body p {
+    padding: 10px 5px;
+}
+
+.tabset-body__active {
+    display: block;
+    background-color: #e3e3e3;
+}
+
+
