@@ -24,19 +24,23 @@ usersListContainer.addEventListener('click', onUserNameClick);
 function onUserNameClick(e) {
     if(e.target.classList.contains('user-name-item')){
         const userId = e.target.dataset.id;
-        fetch(URL + '/' + userId)
-            .then(resp => resp.json())
-            .then(addDataOfUser)
+        getDataOfUser(userId);
     };
 }
 
+function getDataOfUser(userId){
+    fetch(URL + '/' + userId)
+            .then(resp => resp.json())
+            .then(addDataOfUser)
+}
+
 function generateUsersList(data){
-    const user = data.map((el)=>{
+    const usersList = data.map((el)=>{
         return userNameItemTemplate.replace('{{name}}', el.name)
-                                .replace('{{id}}', el.id);
+                                    .replace('{{id}}', el.id);
     });
 
-    usersListContainer.insertAdjacentHTML('beforeend', user.join('\n'));
+    usersListContainer.insertAdjacentHTML('beforeend', usersList.join('\n'));
 
 }
 
