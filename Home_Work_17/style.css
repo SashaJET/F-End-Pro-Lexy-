@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(95, 95, 95);
+    font-family: Tahoma, sans-serif;
+}
+
+h1, h2 {
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 22px;
+    color:rgb(229, 230, 231)
+}
+
+.container{
+    width: 80%;
+    margin: 15px auto;
+    display: flex;
+}
+
+.users-list {
+    width: 50%;    
+}
+
+.user-name-item {
+    padding: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.user-name-item:hover{
+    color:#85a6a6;
+}
+
+.user-data-list span{
+    padding: 5px;
+    font-size: 22px;
+    color:rgb(229, 230, 231)
+}
+
+.user-data {
+    font-size: 18px;
+    color: #fff;
+    padding-top: 40px;
+}
+
