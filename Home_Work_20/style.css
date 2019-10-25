@@ -1,0 +1,100 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+    background-color: #344F72;
+}
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+    /* height: 100vh; */
+}
+
+.header-title {
+    width:450px;
+    background-color: #344F72;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    top: 15px;
+}
+h1 {
+    display: inline-block;
+    color: #a3afbf
+}
+.header-title-add-btn {
+    background-color: red;
+    padding: 10px 15px;
+    position: absolute;
+    right:0;
+}
+
+.stickers-area {
+    position: relative;
+    /* background-color: rgba(227, 221, 215, 0.8); */
+    top: 25px;
+    display: flex;
+
+    height: 100vh;
+}
+.drag-elem{
+    width: 25px;
+    height: 25px;
+    /* background-color: #000; */
+    position: absolute;
+    top: -9px;
+    left: -9px;
+}
+.sticker {
+    width: 300px;
+    height: 255px;
+    background-color: rgba(168, 128, 255, 0.815);
+    position: relative;
+    margin: 5px;
+}
+.sticker::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    border-radius: 50%;
+    background-color: rgba(116, 157, 209, .3);
+}
+.sticker-body {
+    width: 98%;
+    margin: 0 auto;
+    background-color: rgba(214, 220, 227, .9);
+    color: #7b7067;
+}
+
+.sticker-title-input {
+    height:50px;
+    width: 86%;
+}
+
+.sticker-delete-btn {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1px 10px 8px 10px;
+}
+textarea {
+    width: 100%;
+    min-height: 200px;
+}
+
+
+
+input,
+textarea {
+    background: none;
+    color: #282f38;
+    border: none;
+    border-bottom: 1px solid #7b7067;
+    padding: 5px;
+}

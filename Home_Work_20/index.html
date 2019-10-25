@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>stickers</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" async></script>
+
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header-title">
+      <h1>Hello, user!</h1>
+      <span id="addStickBtn" class="header-title-add-btn">ADD</span>
+    </div>
+
+    <div id="stickersArea" class="stickers-area">
+        
+    </div>
+  <script type="text/template" id="sticker_item_template">
+    <div class="sticker" data-sticker-id="{{id}}">
+       
+
+        <input type="text" id="sticker-title" class="sticker-title-input" value="{{title}}" placeholder="Title">
+        <span class="sticker-delete-btn">x</span>
+
+        <textarea id="stikerMessage" class="stiker-message" >
+          {{text}}
+        </textarea> 
+        
+        <div class="drag-elem" style="top:{{top}}px; left:{{left}}px"></div>
+    </div>
+  </script>
+
+</body>
+</html>
