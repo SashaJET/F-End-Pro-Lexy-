@@ -9,6 +9,9 @@
 </head>
 <body>
   <h1>Gallery v3.0</h1>
+  <div class="center">
+      <div id="pagination"></div>
+  </div>
   
   <div id="full-photo_container" class="photo_container">
     <img src="" alt="" id="full-photo" class="">
@@ -16,19 +19,10 @@
   </div>
 
   <div id="gallery" class="gallery"></div>
-
-  <div class="center">
-      <div id="pagination">
-        <a href="">&laquo</a>
-        <a href="" class="active">1</a>
-        <a href="">2</a>
-        <a href="">3</a>
-        <a href="">&raquo</a>
-      </div>
-   </div>
  
   <script type="text/template" id="full-photo_template">
-    <img class="gallery-img" src="{{url}}" data-photo-id="{{id}}" data-full-photo-url="{{fullImgUrl}}">
+    <img class="gallery-img" src="{{url}}" data-photo-id="{{id}}" 
+          data-full-photo-url="{{fullImgUrl}}">
   </script>
 
 </body>
