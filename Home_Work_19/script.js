@@ -22,7 +22,7 @@ init();
 
 paginationBtn.addEventListener('click', onPaginationClick);
 gallery.addEventListener('click', onGalleryClick);
-fullPhotoContainer.addEventListener('click', onCloseClick);
+fullPhotoContainer.addEventListener('click', onCloseBtnClick);
 
 function onGalleryClick(e) {
     switch(true){
@@ -44,7 +44,7 @@ function onPaginationClick(e){
     togglePaginationActiveClass(currentPageBtn);
 }
 
-function onCloseClick(){
+function onCloseBtnClick(){
     if(fullPhotoContainer.classList.contains(SHOW_FULL_PHOTO_CLASS)){
         hideFullPhoto();    
     }
