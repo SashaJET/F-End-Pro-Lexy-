@@ -22,6 +22,7 @@ init();
 
 paginationBtn.addEventListener('click', onPaginationClick);
 gallery.addEventListener('click', onGalleryClick);
+fullPhotoContainer.addEventListener('click', onCloseClick);
 
 function onGalleryClick(e) {
     switch(true){
@@ -41,6 +42,13 @@ function onPaginationClick(e){
     getCurrentPageData(currentPageBtn);
     setItemsInStorage('currentPage', currentPageBtn);    
     togglePaginationActiveClass(currentPageBtn);
+}
+
+function onCloseClick(){
+    if(fullPhotoContainer.classList.contains(SHOW_FULL_PHOTO_CLASS)){
+        hideFullPhoto();    
+    }
+        
 }
 
 function init() {
@@ -111,7 +119,7 @@ function showFullPhoto(url){
 }
 
 function hideFullPhoto(){
-    fullPhotoContainer.classList.add(SHOW_FULL_PHOTO_CLASS);
+    fullPhotoContainer.classList.remove(SHOW_FULL_PHOTO_CLASS);
 }
 
 function togglePaginationActiveClass(btn) {
