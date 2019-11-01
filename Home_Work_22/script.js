@@ -35,6 +35,7 @@ $(function(){
     }
 
     function onDeleteStickerBtnClick(){
+        console.log('del');
         const $stickerId = $(this).parent().data('stickerId');
         deleteSticker($stickerId);
     }
@@ -51,19 +52,23 @@ $(function(){
     function deleteSticker(id) {
         removeSticker(id);
         stickerItems = stickerItems.filter(el => el.id != id);
+
         saveState();
     }
     function removeSticker(id) {
-        getStickerId(id).remove();
+        $container.children()
+                    .filter((index, el) => $(el).data('stickerId') == id)
+                    .remove();
     }
 
     function addSticker(){
         const newSticker = createSticker();
-        $form.serializeArray().map(({name, value}) => newSticker[name] = value);
-        addItemInStickerArea(newSticker)
+
+        $form.serializeArray().forEach(({name, value}) => newSticker[name] = value);               
+        stickerItems.push(newSticker);
         modal.dialog('close');
-        stickerItems.push(stickerItems);
-        // console.log(newSticker);
+
+        addItemInStickerArea(newSticker); 
         saveState();
     }
 
@@ -78,11 +83,6 @@ $(function(){
             description: ''
         }
     }
-
-    function getStickerId(id){
-        return $container.children().filter((el) => $(el).data('stickerId') == id)
-    }
-
 
     function getStickerItemHtml({id, title, description}){
         return $stickerItemTemplate.replace('{{id}}', id)
