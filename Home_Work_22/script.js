@@ -1,6 +1,6 @@
 $(function(){
     const $addStickBtn = $('#addStickBtn');
-    const $stickerItemTemplate = $('#sticker_item_template').html();
+    const $stickerItemTemplate = $('#stickerItemTemplate').html();
     const $form = $('form');
     const $container = $('#container');
     const modal = $('#dialog-form').dialog({
@@ -36,8 +36,8 @@ $(function(){
 
     function onDeleteStickerBtnClick(){
         console.log('del');
-        const $stickerId = $(this).parent().data('stickerId');
-        deleteSticker($stickerId);
+        const stickerId = $(this).parent().data('stickerId');
+        deleteSticker(stickerId);
     }
    
     function init() {
@@ -46,16 +46,16 @@ $(function(){
     } 
 
     function renderStickers(stickerItems) {
-        stickerItems.map(addItemInStickerArea);
+        stickerItems.forEach(stickerItems => addItemInStickerArea(stickerItems));
     }
 
     function deleteSticker(id) {
-        removeSticker(id);
+        removeStickerFromArea(id);
         stickerItems = stickerItems.filter(el => el.id != id);
 
         saveState();
     }
-    function removeSticker(id) {
+    function removeStickerFromArea(id) {
         $container.children()
                     .filter((index, el) => $(el).data('stickerId') == id)
                     .remove();
