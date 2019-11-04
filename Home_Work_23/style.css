@@ -1,0 +1,57 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+    background-color: #344F72;
+}
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+
+}
+lable {
+    font-weight: bold;
+    padding-right: 15px;
+}
+.ui-widget {
+    margin: 20px 0;
+    text-align: center;
+}
+.ui-widget > li {
+
+    background-color: #fff;
+    text-decoration: none;
+    text-align: left;
+}
+#ui-id-1 {
+    width: 398px;
+    text-decoration: none;
+}
+input {
+    height: 30px;
+    width: 400px;
+}
+.user {
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+}
+.user-avatar > img {
+    height: 150px;
+    margin: 20px 50px;
+}
+.user-info {
+    margin: 20px;
+    font-size: 18px;
+}
+.user-info > p {
+    padding: 10px;
+}
+.ui-helper-hidden-accessible {
+    display: none;
+}
