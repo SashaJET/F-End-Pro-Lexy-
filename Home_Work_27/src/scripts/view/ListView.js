@@ -39,6 +39,6 @@ export default class ListView {
     getTodoItemHtml({id, title, isDone}) {
         return this.$todoItemTemplate.replace('{{id}}', id)
                             .replace('{{title}}', title)
-                            .replace('{{isDoneClass}}', isDone ? 'done' : '');
+                            .replace('{{isDoneClass}}', completed ? 'done' : '');
     }
 }
