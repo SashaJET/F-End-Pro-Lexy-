@@ -19,7 +19,7 @@ export default class Controller {
 
     onTodoItemClick(id){
         const model = this.getItemById(id);
-        model.changeState({done: model.done ? false: true})
+        model.changeState({completed: !model.done})
             .then(() => this.listView.renderTodosList(this.collection.listTodos));
     }
     onDeleteBtnClick(id){        
